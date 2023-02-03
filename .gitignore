@@ -15,7 +15,6 @@ crash.*.log
 # to change depending on the environment.
 *.tfvars
 *.tfvars.json
-variables.tf
 *.json
 /Keys
 

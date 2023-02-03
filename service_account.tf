@@ -1,6 +1,6 @@
 resource "google_service_account" "bucket_admin" {
-  account_id = "bucket-admin"
-  display_name = "Bucket Admin Service Account"
+  account_id = local.bucket_name
+  display_name = "Service Account for ${google_storage_bucket.stemly_bucket.name}"
 }
 
 resource "google_project_iam_member" "bucket_admin_role_binding" {
