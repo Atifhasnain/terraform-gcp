@@ -10,7 +10,6 @@ resource "google_project_iam_member" "bucket_admin_role_binding" {
 
 resource "google_service_account_key" "bucket_key" {
   service_account_id = google_service_account.bucket_admin.name
-
 }
 
 data "google_service_account_key" "mykey" {

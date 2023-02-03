@@ -44,6 +44,7 @@ resource "null_resource" "copy_file" {
     command = "scp ${local.bucket_name}.json ${google_compute_instance.stemly.network_interface.0.access_config.0.nat_ip}:~/"
   }
 }
+
 resource "cloudflare_record" "stemly" {
   zone_id = var.cloudflare_zone_id
   name    = var.domain_name
