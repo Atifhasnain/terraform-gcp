@@ -6,9 +6,9 @@ resource "google_compute_instance" "stemly" {
   name         = var.domain_name
   machine_type = var.machine_type
 
-  lifecycle {
-    prevent_destroy = true
-  }
+#  lifecycle {
+#    prevent_destroy = true
+#  }
 
   metadata = {
     ssh-keys = "terraform:${data.local_file.ssh_key.content}"
